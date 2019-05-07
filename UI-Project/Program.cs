@@ -15,23 +15,6 @@ namespace UI_Project
         [STAThread]
         static void Main()
         {
-            /*
-            SqlConnection myConnection = new SqlConnection("user id=username;" +
-                                       "password=password;server=localhost;" +
-                                       "Trusted_Connection=yes;" +
-                                       "database=PersonalFinance; " +
-                                       "connection timeout=30");
-
-            try
-            {
-                myConnection.Open();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-            */
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());

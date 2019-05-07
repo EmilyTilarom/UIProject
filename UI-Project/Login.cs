@@ -22,9 +22,9 @@ namespace UI_Project
             if (useTxt.Text == "user" && pasTxt.Text == "password")
             {
                 MessageBox.Show("You have successfully logged in!");
-                //NewPage ss = new NewPage();
-                //ss.Show();
-                //this.Hide();
+                Search s = new Search();
+                s.Show();
+                this.Hide();
 
             }
             else if (useTxt.Text == "")
