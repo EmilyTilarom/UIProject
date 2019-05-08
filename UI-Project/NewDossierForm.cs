@@ -22,5 +22,12 @@ namespace UI_Project
             NewClientForm newclientform = new NewClientForm();
             newclientform.Show();
         }
+
+        private void bt_save_Click(object sender, EventArgs e)
+        {
+            DossierView ss = new DossierView();
+            ss.Show();
+            this.Hide();
+        }
     }
 }

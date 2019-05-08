@@ -22,8 +22,9 @@ namespace UI_Project
             if (useTxt.Text == "user" && pasTxt.Text == "password")
             {
                 MessageBox.Show("You have successfully logged in!");
-                Search s = new Search();
-                s.Show();
+                Search ss = new Search();
+                //ss.FormClosed += new FormClosedEventHandler(ss_FormClosed);
+                ss.Show();
                 this.Hide();
 
             }
@@ -48,16 +49,8 @@ namespace UI_Project
                 useTxt.Clear();
                 pasTxt.Clear();
             }
-
-
-
         }
 
-        private void login_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'personalFinanceDataSet.LOGIN' table. You can move, or remove it, as needed.
-            this.lOGINTableAdapter.Fill(this.personalFinanceDataSet.LOGIN);
-
-        }
+        
     }
 }

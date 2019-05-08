@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace UI_Project
 {
@@ -17,48 +18,36 @@ namespace UI_Project
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            var table = radioButton1.Checked ? "client" : "dossier";
-            var column = comboBox1.SelectedText;
-            StringBuilder sb = new StringBuilder();
-            sb.AppendFormat(column + " like '%{0}%'",textBox1.Text);
-            this.cLIENTBindingSource.Filter = sb.ToString();
-            //this.cLIENTTableAdapter.Fill(this.cLIE);
-
-
-            switch (table)
+            if (radioButton1.Checked)
             {
-                case "client":
-                    {
-
-                        break;
-                    }
-                case "dossier":
-                    {
-                        break;
-                    }
-                default:
-                    {
-                        Console.WriteLine("rip");
-                        break;
-                    }
+                NewClientForm ss = new NewClientForm();
+                ss.Show();
+            }
+            else
+            {
+                NewDossierForm newss = new NewDossierForm();
+                newss.Show();
             }
         }
 
-        private void cLIENTBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        public string constring = "Data Source=DESKTOP-JIHVB1Q\\MSSQLSERVER01;Initial Catalog = PersonalFinance; Integrated Security = True";
+        private void button2_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.cLIENTBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.personalFinanceDataSet);
+            var table = radioButton1.Checked ? "client" : "dossier";
+            var column = comboBox1.SelectedText;
 
-        }
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                //string q = "SELECT FROM " + table + " WHERE " + column +" LIKE " + textBox1.Text;
+                string q = "INSERT INTO Login(name, password) VALUES ('abc', '123')";
 
-        private void Search_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'personalFinanceDataSet.CLIENT' table. You can move, or remove it, as needed.
-            this.cLIENTTableAdapter.Fill(this.personalFinanceDataSet.CLIENT);
-
+                SqlCommand cmd = new SqlCommand(q, con);
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 }

@@ -135,6 +135,7 @@
             this.bt_save.Text = "Save";
             this.bt_save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_save.UseVisualStyleBackColor = true;
+            this.bt_save.Click += new System.EventHandler(this.bt_save_Click);
             // 
             // bt_newClient
             // 
