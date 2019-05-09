@@ -25,6 +25,8 @@ namespace UI_Project
 
         private void DossierView_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'personalFinanceDataSet.DOSSIER' table. You can move, or remove it, as needed.
+            this.dOSSIERTableAdapter.Fill(this.personalFinanceDataSet.DOSSIER);
             // TODO: This line of code loads data into the 'personalFinanceDataSet.DOSSIER_DETAILS' table. You can move, or remove it, as needed.
             this.dOSSIER_DETAILSTableAdapter.Fill(this.personalFinanceDataSet.DOSSIER_DETAILS);
 

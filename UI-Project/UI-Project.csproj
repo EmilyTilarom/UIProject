@@ -52,6 +52,7 @@
     <Compile Include="ClientView.Designer.cs">
       <DependentUpon>ClientView.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBQueries.cs" />
     <Compile Include="DossierView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +76,9 @@
     </Compile>
     <Compile Include="NewDossierForm.Designer.cs">
       <DependentUpon>NewDossierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalFinanceDataSet.cs">
+      <DependentUpon>PersonalFinanceDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="PersonalFinanceDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

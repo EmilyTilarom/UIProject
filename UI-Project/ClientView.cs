@@ -15,6 +15,13 @@ namespace UI_Project
         public ClientView()
         {
             InitializeComponent();
+            this.cLIENTTableAdapter.Fill(this.personalFinanceDataSet.CLIENT);
+        }
+
+        public ClientView(DataTable dt)
+        {
+            InitializeComponent();
+            FillFromObject(dt);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,9 +44,13 @@ namespace UI_Project
 
         private void ClientView_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'personalFinanceDataSet.CLIENT' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data in to the 'personalFinanceDataSet.CLIENT' table. You can move, or remove it, as needed.
             this.cLIENTTableAdapter.Fill(this.personalFinanceDataSet.CLIENT);
+        }
 
+        private void FillFromObject(DataTable obj)
+        {
+            
         }
     }
 }

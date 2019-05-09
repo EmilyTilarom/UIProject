@@ -39,21 +39,18 @@
             this.checkBoxIncome = new System.Windows.Forms.CheckBox();
             this.checkBoxExpenses = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Document = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOSSIER_DETAILSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personalFinanceDataSet = new UI_Project.PersonalFinanceDataSet();
             this.bt_cancel = new System.Windows.Forms.Button();
             this.bt_save = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.personalFinanceDataSet = new UI_Project.PersonalFinanceDataSet();
-            this.dOSSIER_DETAILSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dOSSIER_DETAILSTableAdapter = new UI_Project.PersonalFinanceDataSetTableAdapters.DOSSIER_DETAILSTableAdapter();
             this.tableAdapterManager = new UI_Project.PersonalFinanceDataSetTableAdapters.TableAdapterManager();
+            this.dOSSIERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dOSSIERTableAdapter = new UI_Project.PersonalFinanceDataSetTableAdapters.DOSSIERTableAdapter();
             this.dDIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dOSSIERNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iNCEXPIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,8 +58,9 @@
             this.dDVALUEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dDDOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personalFinanceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOSSIER_DETAILSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personalFinanceDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOSSIERBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -98,7 +96,7 @@
             // textBoxDossierNumber
             // 
             this.textBoxDossierNumber.Location = new System.Drawing.Point(175, 36);
-            this.textBoxDossierNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDossierNumber.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDossierNumber.Name = "textBoxDossierNumber";
             this.textBoxDossierNumber.ReadOnly = true;
             this.textBoxDossierNumber.Size = new System.Drawing.Size(132, 22);
@@ -107,7 +105,7 @@
             // textBoxClient
             // 
             this.textBoxClient.Location = new System.Drawing.Point(175, 74);
-            this.textBoxClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxClient.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxClient.Name = "textBoxClient";
             this.textBoxClient.ReadOnly = true;
             this.textBoxClient.Size = new System.Drawing.Size(132, 22);
@@ -116,7 +114,7 @@
             // textBoxOverUnder
             // 
             this.textBoxOverUnder.Location = new System.Drawing.Point(175, 140);
-            this.textBoxOverUnder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxOverUnder.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxOverUnder.Name = "textBoxOverUnder";
             this.textBoxOverUnder.ReadOnly = true;
             this.textBoxOverUnder.Size = new System.Drawing.Size(132, 22);
@@ -126,7 +124,7 @@
             // 
             this.checkBoxIncome.AutoSize = true;
             this.checkBoxIncome.Location = new System.Drawing.Point(53, 207);
-            this.checkBoxIncome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxIncome.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxIncome.Name = "checkBoxIncome";
             this.checkBoxIncome.Size = new System.Drawing.Size(75, 21);
             this.checkBoxIncome.TabIndex = 6;
@@ -137,7 +135,7 @@
             // 
             this.checkBoxExpenses.AutoSize = true;
             this.checkBoxExpenses.Location = new System.Drawing.Point(212, 207);
-            this.checkBoxExpenses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxExpenses.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxExpenses.Name = "checkBoxExpenses";
             this.checkBoxExpenses.Size = new System.Drawing.Size(91, 21);
             this.checkBoxExpenses.TabIndex = 7;
@@ -149,11 +147,6 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Date,
-            this.Type,
-            this.Description,
-            this.Document,
-            this.Amount,
             this.dDIDDataGridViewTextBoxColumn,
             this.dOSSIERNODataGridViewTextBoxColumn,
             this.iNCEXPIDDataGridViewTextBoxColumn,
@@ -162,42 +155,27 @@
             this.dDDOCDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dOSSIER_DETAILSBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(52, 253);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(724, 198);
             this.dataGridView1.TabIndex = 8;
             // 
-            // Date
+            // dOSSIER_DETAILSBindingSource
             // 
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
+            this.dOSSIER_DETAILSBindingSource.DataMember = "DOSSIER_DETAILS";
+            this.dOSSIER_DETAILSBindingSource.DataSource = this.personalFinanceDataSet;
             // 
-            // Type
+            // personalFinanceDataSet
             // 
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            // 
-            // Document
-            // 
-            this.Document.HeaderText = "Document";
-            this.Document.Name = "Document";
-            // 
-            // Amount
-            // 
-            this.Amount.HeaderText = "Amount";
-            this.Amount.Name = "Amount";
+            this.personalFinanceDataSet.DataSetName = "PersonalFinanceDataSet";
+            this.personalFinanceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bt_cancel
             // 
             this.bt_cancel.Image = global::UI_Project.Properties.Resources.cancel;
             this.bt_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_cancel.Location = new System.Drawing.Point(67, 497);
-            this.bt_cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_cancel.Margin = new System.Windows.Forms.Padding(4);
             this.bt_cancel.Name = "bt_cancel";
             this.bt_cancel.Size = new System.Drawing.Size(91, 31);
             this.bt_cancel.TabIndex = 10;
@@ -210,7 +188,7 @@
             this.bt_save.Image = ((System.Drawing.Image)(resources.GetObject("bt_save.Image")));
             this.bt_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_save.Location = new System.Drawing.Point(604, 497);
-            this.bt_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_save.Margin = new System.Windows.Forms.Padding(4);
             this.bt_save.Name = "bt_save";
             this.bt_save.Size = new System.Drawing.Size(91, 31);
             this.bt_save.TabIndex = 11;
@@ -232,7 +210,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(175, 106);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(132, 22);
@@ -251,23 +229,13 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(316, 105);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(52, 28);
             this.button2.TabIndex = 27;
             this.button2.Text = "View";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // personalFinanceDataSet
-            // 
-            this.personalFinanceDataSet.DataSetName = "PersonalFinanceDataSet";
-            this.personalFinanceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dOSSIER_DETAILSBindingSource
-            // 
-            this.dOSSIER_DETAILSBindingSource.DataMember = "DOSSIER_DETAILS";
-            this.dOSSIER_DETAILSBindingSource.DataSource = this.personalFinanceDataSet;
             // 
             // dOSSIER_DETAILSTableAdapter
             // 
@@ -283,6 +251,15 @@
             this.tableAdapterManager.INCOME_EXPNECETableAdapter = null;
             this.tableAdapterManager.LOGINTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = UI_Project.PersonalFinanceDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // dOSSIERBindingSource
+            // 
+            this.dOSSIERBindingSource.DataMember = "DOSSIER";
+            this.dOSSIERBindingSource.DataSource = this.personalFinanceDataSet;
+            // 
+            // dOSSIERTableAdapter
+            // 
+            this.dOSSIERTableAdapter.ClearBeforeFill = true;
             // 
             // dDIDDataGridViewTextBoxColumn
             // 
@@ -341,13 +318,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DossierView";
             this.Text = "Dossier View";
             this.Load += new System.EventHandler(this.DossierView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personalFinanceDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOSSIER_DETAILSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personalFinanceDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOSSIERBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,11 +344,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button bt_cancel;
         private System.Windows.Forms.Button bt_save;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Document;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
@@ -379,6 +352,8 @@
         private System.Windows.Forms.BindingSource dOSSIER_DETAILSBindingSource;
         private PersonalFinanceDataSetTableAdapters.DOSSIER_DETAILSTableAdapter dOSSIER_DETAILSTableAdapter;
         private PersonalFinanceDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource dOSSIERBindingSource;
+        private PersonalFinanceDataSetTableAdapters.DOSSIERTableAdapter dOSSIERTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dDIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dOSSIERNODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iNCEXPIDDataGridViewTextBoxColumn;
