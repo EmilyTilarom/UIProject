@@ -125,11 +125,11 @@ namespace UI_Project
             //test input values
             bool allFieldsValid = true;
             allFieldsValid = Name_Validation(null, null) && allFieldsValid;
-            //allFieldsValid = EGN_Validation(null, null) && allFieldsValid;
+            allFieldsValid = EGN_Validation(null, null) && allFieldsValid;
             allFieldsValid = Email_Validation(null, null) && allFieldsValid;
-            //allFieldsValid = (tb_clientPhone.Text.Length == 14) && allFieldsValid;
-            //allFieldsValid = ResAddress_Validation(null, null) && allFieldsValid;
-            //allFieldsValid = MailAddress_Validation(null, null) && allFieldsValid;
+            allFieldsValid = (tb_clientPhone.Text.Length == 14) && allFieldsValid;
+            allFieldsValid = ResAddress_Validation(null, null) && allFieldsValid;
+            allFieldsValid = MailAddress_Validation(null, null) && allFieldsValid;
             if (!allFieldsValid)
             {
                 MessageBox.Show("Some required fields are missing or invalid.", "", MessageBoxButtons.OK);
@@ -151,10 +151,6 @@ namespace UI_Project
             tb_clientPhone.Clear();
             ResAddress_Clear();
             MailAddress_Clear();
-
-            ClientView ss = new ClientView();
-            ss.Show();
-            this.Hide();
         }
 
         private void radioAddress_CheckedChanged(object sender, EventArgs e)

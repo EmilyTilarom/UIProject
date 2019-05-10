@@ -46,44 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ClientView.Designer.cs">
-      <DependentUpon>ClientView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DBQueries.cs" />
-    <Compile Include="DossierView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DossierView.Designer.cs">
-      <DependentUpon>DossierView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="NewClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewClientForm.Designer.cs">
       <DependentUpon>NewClientForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NewDossierForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewDossierForm.Designer.cs">
-      <DependentUpon>NewDossierForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PersonalFinanceDataSet.cs">
-      <DependentUpon>PersonalFinanceDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="PersonalFinanceDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PersonalFinanceDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,20 +60,8 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ClientView.resx">
-      <DependentUpon>ClientView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DossierView.resx">
-      <DependentUpon>DossierView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="NewClientForm.resx">
       <DependentUpon>NewClientForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewDossierForm.resx">
-      <DependentUpon>NewDossierForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,17 +76,6 @@
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="PersonalFinanceDataSet.xsc">
-      <DependentUpon>PersonalFinanceDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="PersonalFinanceDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PersonalFinanceDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PersonalFinanceDataSet.xss">
-      <DependentUpon>PersonalFinanceDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -146,10 +90,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\plus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\cancel.png" />
+    <None Include="Resources\search-glass-vector-icon-magnifier-260nw-1177740787.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
