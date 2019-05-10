@@ -109,7 +109,7 @@ namespace UI_Project
                                 }
                             case "status ('open' or 'closed'":
                                 {
-                                    string a = search.Equals("open") ? "1" : "0";
+                                    string a = search.Equals("open") ? "o" : "c";
                                     this.dOSSIERTableAdapter.FillByStatus(personalFinanceDataSet.DOSSIER, search);
                                     break;
                                 }
@@ -133,7 +133,6 @@ namespace UI_Project
             this.dOSSIERTableAdapter.Fill(this.personalFinanceDataSet.DOSSIER);
             // TODO: This line of code loads data into the 'personalFinanceDataSet.CLIENT' table. You can move, or remove it, as needed.
             this.cLIENTTableAdapter.Fill(this.personalFinanceDataSet.CLIENT);
-
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -143,6 +142,7 @@ namespace UI_Project
                 dataGridView1.Visible = true;
                 dataGridView2.Visible = false;
                 comboBox1.Items.Clear();
+
                 //client columns
                 comboBox1.Items.Add("EGN");
                 comboBox1.Items.Add("name (1-3 parameters)");
@@ -154,6 +154,7 @@ namespace UI_Project
                 dataGridView1.Visible = false;
                 dataGridView2.Visible = true;
                 comboBox1.Items.Clear();
+
                 //dossier collumns
                 comboBox1.Items.Add("DossierNO");
                 comboBox1.Items.Add("client (only ONE parameter)");
