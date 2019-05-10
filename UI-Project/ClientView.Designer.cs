@@ -54,9 +54,10 @@
             this.Status,
             this.Year,
             this.Balance});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 177);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 218);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(344, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(459, 185);
             this.dataGridView1.TabIndex = 20;
             // 
             // Status
@@ -76,61 +77,68 @@
             // 
             // textBoxOverUnder
             // 
-            this.textBoxOverUnder.Location = new System.Drawing.Point(120, 99);
+            this.textBoxOverUnder.Location = new System.Drawing.Point(160, 122);
+            this.textBoxOverUnder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxOverUnder.Name = "textBoxOverUnder";
             this.textBoxOverUnder.ReadOnly = true;
-            this.textBoxOverUnder.Size = new System.Drawing.Size(100, 20);
+            this.textBoxOverUnder.Size = new System.Drawing.Size(132, 22);
             this.textBoxOverUnder.TabIndex = 17;
             // 
             // textBoxClient
             // 
-            this.textBoxClient.Location = new System.Drawing.Point(120, 57);
+            this.textBoxClient.Location = new System.Drawing.Point(160, 70);
+            this.textBoxClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxClient.Name = "textBoxClient";
             this.textBoxClient.ReadOnly = true;
-            this.textBoxClient.Size = new System.Drawing.Size(100, 20);
+            this.textBoxClient.Size = new System.Drawing.Size(132, 22);
             this.textBoxClient.TabIndex = 16;
             // 
             // textBoxDossierNumber
             // 
-            this.textBoxDossierNumber.Location = new System.Drawing.Point(120, 18);
+            this.textBoxDossierNumber.Location = new System.Drawing.Point(160, 22);
+            this.textBoxDossierNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxDossierNumber.Name = "textBoxDossierNumber";
             this.textBoxDossierNumber.ReadOnly = true;
-            this.textBoxDossierNumber.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDossierNumber.Size = new System.Drawing.Size(132, 22);
             this.textBoxDossierNumber.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 106);
+            this.label3.Location = new System.Drawing.Point(35, 130);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.Size = new System.Drawing.Size(41, 17);
             this.label3.TabIndex = 14;
             this.label3.Text = "email";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 60);
+            this.label2.Location = new System.Drawing.Point(35, 74);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(38, 17);
             this.label2.TabIndex = 13;
             this.label2.Text = "EGN";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 18);
+            this.label1.Location = new System.Drawing.Point(35, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(84, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "Client Name";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 149);
+            this.label4.Location = new System.Drawing.Point(35, 183);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
+            this.label4.Size = new System.Drawing.Size(67, 17);
             this.label4.TabIndex = 23;
             this.label4.Text = "Dossiers:";
             // 
@@ -138,9 +146,10 @@
             // 
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(152, 337);
+            this.button3.Location = new System.Drawing.Point(203, 415);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(58, 25);
+            this.button3.Size = new System.Drawing.Size(77, 31);
             this.button3.TabIndex = 24;
             this.button3.Text = "New";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -149,9 +158,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(262, 40);
+            this.button1.Location = new System.Drawing.Point(349, 49);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 25;
             this.button1.Text = "See details";
             this.button1.UseVisualStyleBackColor = true;
@@ -159,9 +169,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(262, 78);
+            this.button2.Location = new System.Drawing.Point(349, 96);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 26;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
@@ -169,9 +180,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(368, 242);
+            this.button4.Location = new System.Drawing.Point(491, 298);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(58, 25);
+            this.button4.Size = new System.Drawing.Size(77, 31);
             this.button4.TabIndex = 27;
             this.button4.Text = "View";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -179,9 +191,9 @@
             // 
             // ClientView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 369);
+            this.ClientSize = new System.Drawing.Size(584, 454);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -194,8 +206,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ClientView";
             this.Text = "Client View";
+            this.Load += new System.EventHandler(this.ClientView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -76,6 +76,14 @@
     <Compile Include="NewDossierForm.Designer.cs">
       <DependentUpon>NewDossierForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonalFinanceDataSet.cs">
+      <DependentUpon>PersonalFinanceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalFinanceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonalFinanceDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search.cs">
@@ -112,6 +120,17 @@
     <EmbeddedResource Include="Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="PersonalFinanceDataSet.xsc">
+      <DependentUpon>PersonalFinanceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PersonalFinanceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PersonalFinanceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PersonalFinanceDataSet.xss">
+      <DependentUpon>PersonalFinanceDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
