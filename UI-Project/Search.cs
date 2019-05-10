@@ -17,10 +17,18 @@ namespace UI_Project
             InitializeComponent();
         }
 
-        
-
-
-
-
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                NewClientForm ss = new NewClientForm();
+                ss.Show();
+            }
+            else
+            {
+                NewDossierForm newss = new NewDossierForm();
+                newss.Show();
+            }
+        }
     }
 }

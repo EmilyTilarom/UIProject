@@ -16,7 +16,7 @@ namespace UI_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NewClientForm());
+            Application.Run(new Login());
         }
     }
 }
